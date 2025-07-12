@@ -24,6 +24,8 @@ async function connectDB() {
 }
 
 function getDB() {
+      // Ensures that the client will close when you finish/error
+    // await client.close();
   if (!db) {
     throw new Error("DB not connected. Call connectDB() first.");
   }
